@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>Ớt xiêm xanh</title>
+		<meta charset = "utf-8">
+		<link rel = "icon" href = ".\images\icon.ico">
+		<link rel = "stylesheet" href = "phongcach.css">
+	</head>
+	<body>
+		<img id = "heading_img" class = "zoom-img" src = ".\images\heading_img.jpg">
+		<div class = "main_heading">
+			<h1>THE THAI GREEN CHILI</h1>
+		</div>
+
+		<div style = "filter: drop-shadow(20px 20px 30px rgba(0, 0, 0, 0.5));">
+			<div class = "quote">
+				<marquee behavior = "scroll" direction = "left" loop = "infinite" scrollamount = "7">
+	                Cô gái à, giả vờ mạnh mẽ, em có mệt không?
+	            </marquee>
+			</div>
+		</div>
+
+		<hr style = "display: block; width: 500px; height: 15px; background-color: #ffa502; margin: auto; border: none; border-radius: 7.5px; z-index: 10;">
+
+		<iframe class = "members_display" src = "members.html"></iframe>
+		<!-- /Gemini -->
+		
+		<hr style = "display: block; width: 500px; height: 15px; background-color: #ffa502; margin: auto; margin-top: 30px; border: none; border-radius: 7.5px;">
+
+		<div style = "filter: drop-shadow(20px 20px 30px rgba(0, 0, 0, 0.65));">
+			<h1 class = "img_title">MỘT SỐ HÌNH ẢNH VỀ NHÓM</h1>
+		</div>
+
+		<div class = "img_set_1">
+			<img id = "img1" class = "zoom-img" src = ".\images\img1.jpg">
+			<img id = "img2" class = "zoom-img" src = ".\images\img2.jpg">
+			<img id = "img3" class = "zoom-img" src = ".\images\img3.jpg">
+			<img id = "img4" class = "zoom-img" src = ".\images\img4.jpg">
+			<img id = "img5" class = "zoom-img" src = ".\images\img5.jpg">
+		</div>
+
+		<div class = "img_set_2" style = "margin-top: 80px;">
+			<img id = "img1" class = "zoom-img" src = ".\images\img6.jpg">
+			<img id = "img2" class = "zoom-img" src = ".\images\img7.jpg">
+			<img id = "img3" class = "zoom-img" src = ".\images\img8.jpg">
+			<img id = "img4" class = "zoom-img" src = ".\images\img9.jpg">
+			<img id = "img5" class = "zoom-img" src = ".\images\img10.jpg">
+		</div>
+
+		<!-- Gemini -->
+		<div id="lightbox" class="lightbox">
+  			<span class="close">&times;</span>
+  			<img class="lightbox-content" id="img-large">
+		</div>
+
+		<script>
+			const lightbox = document.getElementById('lightbox');
+			const imgLarge = document.getElementById('img-large');
+			const closeBtn = document.querySelector('.close');
+
+			// Lắng nghe sự kiện click trên tất cả các ảnh có class 'zoom-img'
+			document.querySelectorAll('.zoom-img').forEach(image => {
+  				image.addEventListener('click', () => {
+    				lightbox.style.display = 'flex'; // Hiện màn đen
+    				imgLarge.src = image.src; // Gán đường dẫn ảnh đã click vào ảnh to
+  				});
+			});
+
+			// Click vào nút X hoặc click ra ngoài ảnh để đóng
+			lightbox.addEventListener('click', (e) => {
+  				if (e.target !== imgLarge) {
+    				lightbox.style.display = 'none';
+  				}
+			});
+		</script>
+		<!-- /Gemini -->
+
+		<marquee class = "mimg" behavior = "scroll" direction = "left" loop = "infinite" scrollamount = "7">
+            <img src = ".\images\mimg_1.jpg">
+        </marquee>
+
+		<hr style = "display: block; width: 500px; height: 15px; background-color: #ffa502; margin: auto; border: none; border-radius: 7.5px;">
+
+		<div id = "phantom" style = "display: none; margin-top: 50px; height: 50px;">p</div>
+
+</body>
+</html>
