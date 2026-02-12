@@ -1,203 +1,603 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+<!-- https://freefrontend.com/ -->
+<html>
+  	<head>
+  		  <title>Members</title>
+  		  <style>
+      			@import url('https://fonts.googleapis.com/css2?family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
+      			@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Spartan&display=swap");
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
 
-body {
-		background: #2f3542;
-}
+            @font-face {
+                font-family: "thewitcher";
+                src: url("https://aditibuket.s3.ap-south-1.amazonaws.com/Thewitcher-jnOj.ttf")
+                format("truetype");
+            }
+            body {
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: #2f3542;
+            }
 
-#heading_img {
-		width: 700px;
-		margin: 40px;
-		margin-left: 100px;
-		border-radius: 15px;
-		box-shadow: 20px 20px 50px rgb(28, 28, 28);
-		transition: 0.5s;
-}
+            .wrapper {
+                margin: auto;
+                width: 90%;
+            }
 
-#heading_img:hover {
-		transform: scale(1.1);
-}
+            img {
+                max-width: 100%;
+                height: auto;
+            }
 
-.main_heading {
-		background: #ffa502;
-		border-radius: 15px;
-		border: 2px black solid;
-		font-size: 45px;
-		font-family: Anton;
-		color: #2f3542;
-		text-align: center;
-		width: 350px;
-		float: right;
-		margin-right: 200px;
-		margin-top: 45px;
-		box-shadow: 30px 30px 60px rgb(28, 28, 28);
-}
+            .main-title {
+                position: relative;
+                margin: 0 auto;
+                width: 100%;
+                inset: 0;
+                font-size: 2.5rem;
+                padding: 0.5em 0;
+                text-align: center;
+                font-family: "Playwrite AT", cursive;
+                color: rgb(206, 202, 202);
+            }
 
-.quote {
-		height: 75px;
-		background: #ffa502;
-		font-family: Anton;
-		font-size: 50px;
-		color: #2f3542;
-		margin-top: 50px;
-		margin-bottom: 20px;
-		clip-path: polygon(0 0, 91% 0, 100% 100%, 9% 100%);
-}
+            .container::before {
+                content: "";
+                position: absolute;
+                background: no-repeat
+                  url("https://github.com/aditee08/repo/blob/main/pngegg%20(1).png?raw=true");
+            }
+            .container {
+                inset: 0;
+                margin: 1em auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 380px;
+                background-color: rgb(32, 31, 30);
+                box-shadow: var(--shadow-elevation-medium);
+                transition: all 0.3s;
+                z-index: 102;
+                outline: 4px solid #83868a;
+                outline-offset: 2px;
+            }
+            .memsimg {
+                z-index: 2000;
+                transition: transform 0.5s;
+                display: block;
+                margin: 0 auto;
+                width: 250px;
+            }
 
-/* Gemini */
-/* Thiết lập cơ bản cho Menu */
-.menu-container {
-		position: relative;
-		margin: 80px 100px;
-		width: 400px;
-		cursor: pointer;
-		font-family: Arial, sans-serif;
-		font-size: 20px;
-}
+            .tienpng {
+                transform: scale(1.2) translateY(10px);
+                filter: brightness(1.2);
+                padding-bottom: 35px;
+            }
+            .thopng {
+                transform: translateY(10px);
+                filter: brightness(1);
+                width: 280px;
+                margin: auto;
+            }
+            .trinhpng {
+                transform: scale(1.3) translateY(-30px);
+                transition: transform 0.5s;
+                width: 220px;
+                margin-top: 95px;
+                margin-left: 80px;
+            }
+            .nganpng {
+                transform: scale(1);
+                padding-left: 30px;
+                width: 280px;
+                margin-left: 35px;
+            }
+            .wraithpng {
+                transform: scale(0.79) translateY(-119px);
+                transition: all 0.5s;
+            }
+            .succubuspng {
+                transform: scale(0.8) translateY(-65px);
+                padding-right: 20px;
+            }
+            .kikimorepng {
+                transform: scale(0.9);
+            }
 
-.menu-header {
-  	background: #30336b;
-  	color: white;
-  	padding: 15px;
-  	text-align: center;
-  	font-weight: bold;
-  	box-shadow: 20px 20px 50px rgb(28, 28, 28);
-}
+            .figure {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+                background-color: rgb(10, 17, 12);
+                height: 350px;
+            }
 
-.menu-list {
-  	list-style: none;
-  	padding: 0;
-  	margin: 0;
-  	position: absolute; /* QUAN TRỌNG: Không đẩy các thành phần khác */
-  	top: 100%;          /* Xuất hiện ngay sát mép dưới của menu-header */
-  	left: 0;
-  	width: 100%;
-}
+            .figure-tien {
+                background-image: url("images/ngothithuytien_bg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
 
-/* Trạng thái ban đầu của các mục menu */
-.menu-list li {
-		border-bottom: #130f40 3px solid;
-		border-left: #130f40 3px solid;
-		border-right: #130f40 3px solid;
-  	background: #686de0;
-  	height: 0; /* Ẩn các mục */
-  	opacity: 0;
-  	overflow: hidden;
-  	transition: all 0.4s ease;
-  	/* Dùng biến --i để tạo hiệu ứng bậc thang */
-  	/*width: calc(100% + (var(--i) * 20px)); */
-  	transform: translateX(-100%); /* Đẩy ra ngoài màn hình */
-}
+            .figure-tho {
+                background-image: url("images/nguyenanhtho_bg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .figure-trinh {
+                background-image: url("images/nguyenthitutrinh_bg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .figure-ngan {
+                background-image: url("images/nguyenthikimngan_bg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .figure-wraith {
+                background-color: #77b8b7;
+                background: linear-gradient(to right, rgb(124, 139, 141), rgb(44, 79, 83));
+            }
+            .figure-succubus {
+                background: radial-gradient(circle, #cf93ae 30%, #823e5c 80%);
+            }
+            .figure-kikimore {
+                background: radial-gradient(
+                  circle,
+                  rgb(225, 225, 253) 0%,
+                  rgb(82, 82, 114) 100%
+                );
+            }
 
-.menu-list li a {
-  	display: block;
-  	color: white;
-  	padding: 15px;
-  	text-decoration: none;
-  	white-space: nowrap;
-}
+            h3 {
+                text-transform: uppercase;
+                color: rgb(224, 222, 222);
+                text-align: center;
+                font-family: Spartan;
+                font-weight: 200;
+                letter-spacing: 1.2px;
+            }
 
-/* Hiệu ứng khi di chuột vào container */
-.menu-container:hover .menu-list li {
-  	height: 50px; /* Hiện độ cao */
-  	opacity: 1;
-  	transform: translateX(0); /* Đưa về vị trí cũ */
-  	/* Tạo hiệu ứng xuất hiện lần lượt từ trên xuống */
-  	transition-delay: calc(0.1s * var(--i));
-}
+            h4 {
+                font-weight: 200;
+                font-family: Spartan;
+                letter-spacing: 0.9px;
+            }
+            .content {
+                padding: 0 1.4em;
+                text-align: left;
+            }
+            .content > .description {
+                margin-top: -10px;
+                font-family: Oswald;
+                letter-spacing: 0.9px;
+                font-weight: 100;
+                color: rgb(202, 202, 201);
+                font-size: 1rem;
+            }
 
-/* Hiệu ứng hover cho từng mục để thêm phần sinh động */
-.menu-list li:hover {
-  	background: #4834d4;
-  	padding-left: 20px;
-}
+            .footer {
+                position: relative;
+                z-index: 10;
+                padding: 0em 0.5em 0em 0.5em;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                align-items: center;
+                width: 95%;
+                margin: 0 auto 1em auto;
+                background-color: rgb(32, 31, 29);
+                box-shadow: 0 3.2px 7.2px 0 rgba(53, 53, 53, 0.132),
+                  0 0.6px 1.8px 0 rgba(36, 35, 35, 0.108);
+            }
 
-.members_display {
-		display: block;
-		margin: auto;
-		width: 800px;
-		height: 850px;
-		margin-top: 40px;
-		right: 100px;
-		border: #f39c12 solid 10px;
-		border-radius: 10px;
-		box-shadow: 20px 20px 50px rgb(28, 28, 28);
-}
+            .footer-tien {
+                background: #eb5757;
+                background-color: rgb(32, 31, 29);
+            }
 
-.img_set_1, .img_set_2 {
-	  display: flex;
-	  justify-content: space-evenly;
-	  margin-top: 40px;
-}
+            .footer-tho {
+                background: #833939;
+                background-color: rgb(32, 31, 29);
+            }
+            .footer-wraith {
+                background-color: rgb(40, 68, 71);
+                background-color: rgb(32, 31, 29);
+            }
+            .footer-succubus {
+                background-color: rgb(90, 55, 78);
+                background-color: rgb(32, 31, 29);
+            }
 
-.img_set_1 img, .img_set_2 img {
-		display: block;
-		border: 5px solid #f39c12;
-		border-radius: 10px;
-	  width: 200px;
-	  box-shadow: 20px 20px 50px rgb(28, 28, 28);
-	  transition: 0.4s;
-}
+            .footer-kikimore {
+                background-color: rgb(49, 49, 63);
+                background-color: rgb(32, 31, 29);
+            }
 
-.img_set_1 img:hover, .img_set_2 img:hover {
-		transform: scale(1.2);
-		z-index: 10;
-}
+            .details {
+            	height: 150px;
+                font-family: Oswald;
+                letter-spacing: 0.8px;
+                background-color: #302f30;
+                border-radius: 1px;
+                color: inherit;
+                padding: 0em 0.4em;
+                box-shadow: var(--shadow-elevation-high);
+                border: 0.1px solid #403d3d;
+            }
 
-.img_title {
-		display: inline-block;
-		width: 500px;
-		margin-top: 30px;
-		font-family: Oswald, sans-serif;
-		font-size: 35px;
-		color: #2f3542;
-		background: #ffa502;
-		padding: 15px;
-		clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
-}
+            .details > h6 {
+                font-family: Spartan;
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                letter-spacing: 1.1px;
+                font-weight: 100;
+                color: white;
+                padding: 0;
+                margin: 1.4em 0;
+            }
 
-/* Gemini */
-/* Màn đen phủ toàn màn hình */
-.lightbox {
-  	display: none; /* Mặc định ẩn */
-  	position: fixed;
-	  z-index: 1000;
-	  top: 0; left: 0;
-	  width: 100%; height: 100%;
-	  background-color: rgba(0, 0, 0, 0.9); /* Màu đen trong suốt */
-	  justify-content: center;
-	  align-items: center;
-}
+            .details > p {
+                font-size: 0.95rem;
+                letter-spacing: 1.6px;
+                color: rgb(201, 192, 192);
+                color: white;
+                font-weight: 100;
+                padding: 0;
+                padding: 0em 0.1em;
+            }
 
-/* Ảnh phóng to */
-.lightbox-content {
-	  max-width: 80%;
-	  max-height: 80%;
-	  border: 3px solid white;
-	  border-radius: 5px;
-  	animation: zoomIn 0.3s; /* Hiệu ứng hiện ra mượt hơn */
-}
+            .details iframe {
+                width: 280px;
+                height: 150px;
+            }
 
-/* Nút đóng (X) */
-.close {
-	  position: absolute;
-	  top: 20px; right: 40px;
-	  color: white;
-	  font-size: 50px;
-	  cursor: pointer;
-}
+            .footer-tien > .details {
+                background-color: #f39c12;
+            }
+            .footer-tho > .details {
+                background-color: #f39c12;
+            }
+            .footer-wraith > .details {
+                background-color: #f39c12;
+            }
+            .footer-trinh > .details {
+                background-color: #f39c12;
+            }
+            .footer-ngan > .details {
+                background-color: #f39c12;
+            }
+            .footer-succubus > .details {
+                background-color: #f39c12;
+            }
+            .footer-kikimore > .details {
+                background-color: #f39c12;
+            }
+            .slide {
+                z-index: 50;
+                background-color: rgb(58, 57, 57);
+                color: rgb(168, 162, 162);
+                border-radius: 7px;
+                outline: none;
+                padding: 1.2em 1em;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1rem;
+                font-weight: 600;
+                opacity: 1;
+                border: 0.5px solid rgb(56, 56, 56);
+                backdrop-filter: blur(5px);
+                cursor: pointer;
+            }
 
-@keyframes zoomIn {
-	  from { transform: scale(0); }
-	  to { transform: scale(1); }
-}
-/* /Gemini */
+            .prev {
+              left: 32%;
+              top: 50%;
+              position: absolute;
+            }
 
-.mimg img {
-		z-index: 10;
-		margin-top: 50px;
-		margin-bottom: 50px;
-		width: 320px;
-		box-shadow: 20px 20px 30px rgb(28, 28, 28);
-		border: 5px solid #f39c12;
-		border-radius: 10px;
-}
+            .next {
+                position: absolute;
+                right: 32%;
+                top: 50%;
+            }
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1s;
+                animation-name: fade;
+                animation-duration: 1s;
+            }
+
+            @-webkit-keyframes fade {
+                from {
+                    opacity: 0.4;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fade {
+                from {
+                    opacity: 0.5;
+                }
+                to {
+                    opacity: 1;
+                }
+            }
+
+            .slide {
+                transition: all 0.3s;
+            }
+
+            @media (max-width: 1080px) {
+                .slide {
+                    background-color: rgb(68, 66, 66);
+                }
+                .prev {
+                    left: 0%;
+                }
+                .next {
+                    right: 0%;
+                }
+            }
+            @media (max-width: 450px) {
+                .slide {
+                    background-color: transparent;
+                }
+            }
+            @media (hover: hover) and (pointer: fine) {
+                .slide:hover {
+                    background-color: rgb(68, 67, 67);
+                }
+                .succubuspng:hover {
+                    transform: scale(0.9) translateY(-65px);
+                }
+
+                .scaleonzoom:hover {
+                    transform: scale(1.39);
+                }
+                .tienpng:hover {
+                    transform: scale(1.4);
+                }
+
+                .wraithpng:hover {
+                    transform: scale(0.9) translateY(-50px);
+                }
+                .trinhpng:hover {
+                    transform: scale(1.5) translateY(-30px);
+                }
+                .nganpng:hover {
+                    transform: scale(1.15);
+                }
+                .thopng:hover {
+                    transform: scale(1.2) translateY(20px);
+                }
+                .kikimorepng:hover {
+                    transform: scale(1.1);
+                }
+            }
+            :root {
+                --shadow-color: 41deg 3% 15%;
+                --shadow-elevation-low: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.65),
+                  0.4px 0.8px 0.8px -2px hsl(var(--shadow-color) / 0.48),
+                  1.1px 2.2px 2.2px -4.1px hsl(var(--shadow-color) / 0.32);
+                --shadow-elevation-medium: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.68),
+                  0.6px 1.2px 1.2px -1.3px hsl(var(--shadow-color) / 0.55),
+                  1.9px 3.9px 3.9px -2.7px hsl(var(--shadow-color) / 0.42),
+                  5.4px 10.8px 10.8px -4.1px hsl(var(--shadow-color) / 0.29);
+                --shadow-elevation-high: 0.3px 0.5px 0.5px hsl(var(--shadow-color) / 0.56),
+                  0.8px 1.5px 1.5px -0.5px hsl(var(--shadow-color) / 0.51),
+                  1.5px 2.9px 2.9px -1px hsl(var(--shadow-color) / 0.47),
+                  2.7px 5.5px 5.5px -1.5px hsl(var(--shadow-color) / 0.42),
+                  4.9px 9.7px 9.7px -2px hsl(var(--shadow-color) / 0.37),
+                  8.2px 16.5px 16.4px -2.5px hsl(var(--shadow-color) / 0.32),
+                  13.1px 26.3px 26.2px -3px hsl(var(--shadow-color) / 0.28),
+                  20px 39.9px 39.8px -3.5px hsl(var(--shadow-color) / 0.23),
+                  29px 58px 57.9px -4.1px hsl(var(--shadow-color) / 0.18);
+            }
+  		  </style>
+  	</head>
+    <body>
+  		  <h1 class="main-title">CÁC THÀNH VIÊN CỦA TỔ</h1>
+        <button class="slide prev" onclick="plusSlides(-1)">&lt;</button>
+
+        <div class="container border1 slideshow-container ">
+            <section class="mySlides fade">
+                <figure class="figure figure-tien">
+                    <img class='memsimg tienpng' src=".\images\ngothithuytien_nobg.jpg" alt="tien">
+                </figure>
+                <div class="content">
+                    <h3>NGO THI THUY TIEN</h3>
+                    <p class="description">- Trong một khu rừng thần thoại, nơi dòng suối biến thành một giấc mơ, một cái say đắm hình ảnh phản chiếu của chính mình dưới làn nước trong veo của con suối - hương sắc từ đôi mắt của kẻ soi bóng mình dưới suối, không phô trương nhưng đủ để vĩnh cửu, để lưu giữ những khoảnh khắc tuyệt đẹp của cuộc sống.</p>
+                </div>
+                <footer class="footer footer-tien">
+                    <div class="details">
+                        <h6>Class</h6>
+                        <p>12A4</p>
+                    </div>
+                    <div class="details">
+                        <h6>Personality</h6>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px;" src="https://open.spotify.com/embed/track/5PNWoco3YGQpcW9bLbiU3R?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </footer>
+            </section>
+            <section class="mySlides fade">
+                <figure class="figure figure-tho">
+                    <img class='memsimg thopng' src=".\images\nguyenanhtho_nobg.jpg" alt="tho">
+                </figure>
+                <div class="content">
+                    <h3>NGUYEN ANH THO</h3>
+                    <p class="description">- Trẻ con sa mạc truyền tai nhau bài đồng dao xương rồng đơm lá đơm hoa nước đông đầy trên cao nguyên đá là ngày hoàng đế trở về nhà người Shurima luôn mơ về thời khắc tái sinh của nhà Vua. Và cuối cùng ngày đó đã thành sự thật.</p>
+                </div>
+                <footer class="footer footer-tho">
+                    <div class="details">
+                        <h6>Class</h6>
+                        <p>12A4</p>
+                    </div>
+                    <div class="details">
+                        <h6>Personality</h6>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px;" src="https://open.spotify.com/embed/track/4LhgwcTWwJQc6DFTkLXVEc?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </footer>
+            </section>
+            <section class="mySlides fade">
+                <figure class="figure figure-trinh">
+                    <img class='trinhpng' src=".\images\nguyenthitutrinh_nobg.jpg" alt="trinh">
+                </figure>
+                <div class="content">
+                    <h3>NGUYEN THI TU TRINH</h3>
+                    <p class="description">- Không bàn chuyện quá khứ, không hỏi về tương lai. Chỉ tập trung vào phút giây này, nơi hơi thở vẫn đều và trái tim còn đang đập. "Past or future, just let them be.".</p>
+                </div>
+                <footer class="footer footer-trinh">
+                    <div class="details">
+                        <h6>Class</h6>
+                        <p>12A4</p>
+                    </div>
+                    <div class="details">
+                        <h6>Personality</h6>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px;" src="https://open.spotify.com/embed/track/1vrd6UOGamcKNGnSHJQlSt?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </footer>
+            </section>
+            <section class="mySlides fade">
+                <figure class="figure figure-ngan">
+                    <img class='memsimg nganpng' src=".\images\nguyenthikimngan_nobg.jpg" alt="ngan">
+                </figure>
+                <div class="content">
+                    <h3>NGUYEN THI KIM NGAN</h3>
+                    <p class="description">- Tôi là một người luôn đề cao tri thức và tinh thần học hỏi không ngừng. Tôi tin rằng hiểu biết chính là nền tảng giúp con người trưởng thành, sống có trách nhiệm và đóng góp tích cực cho xã hội. Vì vậy, tôi luôn chủ động trau dồi kiến thức, rèn luyện tư duy và hoàn thiện bản thân mỗi ngày.</p>
+                </div>
+                <footer class="footer footer-ngan">
+                    <div class="details">
+                        <h6>Class</h6>
+                        <p>12A4</p>
+                    </div>
+                    <div class="details">
+                        <h6>Personality</h6>
+                        <iframe data-testid="embed-iframe" style="border-radius:12px; height: 100%;" src="https://open.spotify.com/embed/track/6GxdtMg7DdomU79EodUpfk?utm_source=generator" width="100%" height="150" frameBorder="0" allowfullscreen="" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </footer>
+            </section>
+            <section class="mySlides fade">
+                <figure class="figure figure-wraith">
+                    <img class=' monsimg wraithpng' src="https://github.com/aditee08/repo/blob/main/noon%20latest.png?raw=true" alt="Noonwraith">
+                </figure>
+                <div class="content">
+                    <h3>wraith</h3>
+                    <p class="description">Wraiths are specters which do not belong in this world.They appear near cemeteries or in homes they inhabited during their lives. They usually have no
+                    memories and are guided strictly by hatred towards the living.</p>
+                </div>
+                <footer class="footer footer-wraith">
+                    <div class="details">
+                        <h6>Class</h6>
+                        <p>Specter</p>
+                    </div>
+                    <div class="details">
+                        <h6>Personality</h6>
+                        <p>Silver, Specter oil</p>
+                    </div>
+                </footer>
+            </section>
+            <section class="mySlides fade">
+                <figure class="figure figure-succubus">
+                    <img class='monsimg succubuspng' src="https://github.com/aditee08/repo/blob/main/Tw3_journal_succubus.png?raw=true" alt="succubus">
+                </figure>
+                <div class="content">
+                    <h3>succubus</h3>
+                    <p class="description">A succubus is a creature who looks like a highly attractive human being. Unlike other monsters, succubi and menads feel no desire to kill or harm. They are motivated by one thing and one thing only: an insatiable lust.</p>
+                </div>
+                <footer class="footer footer-succubus">
+                    <div class="details">
+                        <h6>Class</h6>
+                        <p>Hybrid</p>
+                    </div>
+                    <div class="details">
+                        <h6>Personality</h6>
+                        <p>Hybrid oil, Quen</p>
+                    </div>
+                </footer>
+            </section>
+            <section class="mySlides fade">
+                <figure class="figure figure-kikimore">
+                    <img class='monsimg  kikimorepng' src="https://github.com/aditee08/repo/blob/main/kikipng_final.png?raw=true" alt="leshen">
+                </figure>
+                <div class="content">
+                    <h3>kikimore</h3>
+                    <p class="description">Kikimore, or kikimora, is an insectoid monster species that lives underground, as well as in swamps. Kikimores groups tend to consist out of several workers and one warrior. The queen is a mass of insect abominations that is almost impossible to defeat in direct combat.</p>
+                </div>
+                <footer class="footer footer-kikimore">
+                    <div class="details">
+                        <h6>Class</h6>
+                        <p>Insectoid</p>
+                    </div>
+                    <div class="details">
+                        <h6>Personality</h6>
+                        <p>White honey, Igni</p>
+                    </div>
+                </footer>
+            </section>
+            <section class="mySlides fade">
+                <figure class="figure figure-kikimore">
+                    <img class='monsimg  kikimorepng' src="https://github.com/aditee08/repo/blob/main/kikipng_final.png?raw=true" alt="leshen">
+                </figure>
+                <div class="content">
+                    <h3>kikimore</h3>
+                    <p class="description">Kikimore, or kikimora, is an insectoid monster species that lives underground, as well as in swamps. Kikimores groups tend to consist out of several workers and one warrior. The queen is a mass of insect abominations that is almost impossible to defeat in direct combat.</p>
+                </div>
+                <footer class="footer footer-kikimore">
+                    <div class="details">
+                        <h6>Class</h6>
+                        <p>Insectoid</p>
+                    </div>
+                    <div class="details">
+                        <h6>Personality</h6>
+                        <p>White honey, Igni</p>
+                    </div>
+                </footer>
+            </section>
+        </div>
+        <button class="slide next" onclick="plusSlides(1)">&gt;</button>
+
+  		<script>
+  			var slideIndex = 1;
+            showSlides(slideIndex);
+
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides((slideIndex += n));
+            }
+
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides((slideIndex = n));
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                // var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {
+                    slideIndex = 1;
+                }
+                if (n < 1) {
+                    slideIndex = slides.length;
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }
+  		</script>
+
+  	</body>
+</html>
