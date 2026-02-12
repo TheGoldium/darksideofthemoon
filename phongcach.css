@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
 
 body {
-	background: #2f3542;
+		background: #2f3542;
 }
 
 #heading_img {
-	width: 700px;
-	margin: 40px;
-	margin-left: 100px;
-	border-radius: 15px;
-	box-shadow: 20px 20px 50px rgb(28, 28, 28);
-	transition: 0.5s;
+		width: 700px;
+		margin: 40px;
+		margin-left: 100px;
+		border-radius: 15px;
+		box-shadow: 20px 20px 50px rgb(28, 28, 28);
+		transition: 0.5s;
 }
 
 #heading_img:hover {
@@ -201,4 +201,5 @@ body {
 		border: 5px solid #f39c12;
 		border-radius: 10px;
 }
+
 
