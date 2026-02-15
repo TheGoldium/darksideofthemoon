@@ -122,6 +122,13 @@
                 transition: 0.5s;
             }
 
+            .duypng {
+                display: block;
+                margin: auto;
+                transform: translateY(-30px);
+                transition: 0.5s;
+            }
+
             .figure {
                 display: block;
                 margin: 0 auto;
@@ -167,6 +174,12 @@
                   #353b48 0%,
                   #576574 100%
                 );
+            }
+
+            .figure-duy {
+                background-image: url("images/nguyenthinhuhuyen_bg.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
             }
 
             h3 {
@@ -235,6 +248,11 @@
                 background-color: rgb(32, 31, 29);
             }
 
+            .footer-duy {
+                background-color: rgb(49, 49, 63);
+                background-color: rgb(32, 31, 29);
+            }
+
             .details {
             	height: 150px;
                 font-family: Oswald;
@@ -292,6 +310,9 @@
                 background-color: var(--color2);
             }
             .footer-khoa > .details {
+                background-color: var(--color2);
+            }
+            .footer-duy > .details {
                 background-color: var(--color2);
             }
             .slide {
@@ -403,6 +424,10 @@
 
                 .khoapng:hover {
                     transform: scale(1.2) translateY(-74.5px);
+                }
+                
+                .duypng:hover {
+                    transform: scale(1.2) translateY(-57px);
                 }
             }
             :root {
@@ -546,8 +571,27 @@
                 </footer>
             </section>
             <section class="mySlides fade">
+                <figure class="figure figure-duy">
+                    <img class='duypng' src=".\images\trankhanhduy_nobg.jpg" alt="duy">
+                </figure>
+                <div class="content">
+                    <h3>TRAN KHANH DUY</h3>
+                    <p class="description">- Sát thủ nguy hiểm nhất, không phải là kẻ mạnh nhất, mà là kẻ vô tình nhất.</p>
+                </div>
+                <footer class="footer footer-duy">
+                    <div class="details">
+                        <h6>Class</h6>
+                        <p>12A4</p>
+                    </div>
+                    <div class="details">
+                        <h6>Personality</h6>
+                        <p>White honey, Igni</p>
+                    </div>
+                </footer>
+            </section>
+            <section class="mySlides fade">
                 <figure class="figure figure-khoa">
-                    <img class='monsimg  khoapng' src=".\images\mugshot_nobg.jpg" alt="khoa">
+                    <img class='khoapng' src=".\images\mugshot_nobg.jpg" alt="khoa">
                 </figure>
                 <div class="content">
                     <h3>#011-dangkhoa</h3>
@@ -556,30 +600,11 @@
                 <footer class="footer footer-khoa">
                     <div class="details">
                         <h6>Class</h6>
-                        <p>outsider</p>
+                        <p>undf</p>
                     </div>
                     <div class="details">
                         <h6>Personality</h6>
                         <iframe data-testid="embed-iframe" style="border-radius:12px; width: 280px;" src="https://open.spotify.com/embed/track/3uoiMYnFl3aVMUp1AYBNBM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-                </footer>
-            </section>
-            <section class="mySlides fade">
-                <figure class="figure figure-khoa">
-                    <img class='monsimg  khoapng' src="https://github.com/aditee08/repo/blob/main/kikipng_final.png?raw=true" alt="leshen">
-                </figure>
-                <div class="content">
-                    <h3>khoa</h3>
-                    <p class="description">khoa, or kikimora, is an insectoid monster species that lives underground, as well as in swamps. khoas groups tend to consist out of several workers and one warrior. The queen is a mass of insect abominations that is almost impossible to defeat in direct combat.</p>
-                </div>
-                <footer class="footer footer-khoa">
-                    <div class="details">
-                        <h6>Class</h6>
-                        <p>Insectoid</p>
-                    </div>
-                    <div class="details">
-                        <h6>Personality</h6>
-                        <p>White honey, Igni</p>
                     </div>
                 </footer>
             </section>
